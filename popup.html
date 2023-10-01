@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .clickable {
+            cursor: pointer;
+        }
+        body {
+            width: 400px;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        .active-filters-text {
+            font-size: 70%; /* Adjust the font size as needed */
+        }
+        .btn-remove {
+            font-size: 50%;  /* Adjust the font size for the "X" emoji */
+            border: none;
+            background: none;
+            padding: 0;  /* Remove padding to make the emoji closer to the domain */
+            vertical-align: middle;  /* Center vertically */
+            position: relative;  /* Relative positioning */
+            top: 2px;  /* Adjust positioning */
+            margin-top: 5px;
+        }
+
+        .btn-remove:hover {
+            color: #fff;  /* White color for the "X" emoji */
+            background-color: #cbc4c5;  /* Red background color */
+            border-color: #af2936;  /* Border color */
+            border-radius: 50%;  /* Make the background circular */
+            padding: 0.1em 0.2em;  /* Adjust padding to control the circle size */
+        }
+        body {
+            background-color: #f0f0f0;
+        }
+        .list-group-item {
+            margin-bottom: 5px;  /* Adjust the space as needed */
+            border-radius: 5px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Wrapping div to align the elements inline -->
+    <div style="display: flex; align-items: center; margin-bottom: 0px;">
+        <!-- Filter by dropdown -->
+        <div id="domainFilterDiv" class="dropdown" style="margin-right: 5px;">
+            <button id="domainFilterButton" class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                Filter by
+              </button>
+            <div id="filterDropdown" class="dropdown-menu" style="display: none;">
+                <!-- Items will be populated here by JavaScript -->
+            </div>
+        </div>
+      
+        <!-- Search bar -->
+        <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="Search tabs...">
+    </div>
+    <div id="savedDomainsList"></div>
+    
+    <ul id="tabsList" class="list-group"></ul>
+    <script src="popup.js"></script>
+</body>
+</html>

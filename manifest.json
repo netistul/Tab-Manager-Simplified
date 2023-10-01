@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Manager Simplifed",
+  "version": "1.0",
+  "description": "Track, search, and filter your browser tabs in real-time. Keep an eye on active tabs and bring order to your browsing experience.",
+  "permissions": ["tabs", "activeTab", "storage"],
+  "icons": {
+    "16": "tabs.png",
+    "48": "tabs.png",
+    "128": "tabs.png"
+},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
